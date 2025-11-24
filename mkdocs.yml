@@ -1,0 +1,35 @@
+site_name: DARTH Documentation
+
+nav:
+  - Overview: overview.md
+  - Data Summary: tables_summary.md
+  - Datasets:
+    - Ausgrid 300 Homes Solar Data: ausgrid300.md
+    - Solar Analytics Solar Data 2019 Dataset: solar_analytics_2019.md
+    - PV Bushfire Data: pv_bushfire.md
+    - Victorian Consumers Data: victorian_consumers.md
+    - EDP (Energy Data Platform): edp.md
+    - BOM (Bureau of Meteorology): bom.md
+  - Access: 
+    - Access via Web Downloader : accessweb.md
+    - Access via SSH and Scripts : accessssh.md
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+  features:
+    - navigation.sections
+    - content.code.annotate
+    - search.highlight
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - footnotes
+  - codehilite
+  - attr_list
