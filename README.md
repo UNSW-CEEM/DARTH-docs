@@ -28,17 +28,24 @@ docs/index.md   ← Home page
 
 ### Open the Markdown file you want to update in your code editor  
 
-edit
+Edit the file as needed.
+	
+	Note: Files like edp.md appear in both the main site and EDP site, so editing them updates both.
 
 ## 2.  Preview changes locally 
 
 Before publishing, you can see how your changes will look in the browser: 
 
 ~~~
-python3 -m mkdocs serve
+# Preview main DARTH site
+mkdocs serve -f mkdocs.yml
+# Open browser: http://127.0.0.1:8000/
 ~~~
-
-- Open your browser at: http://127.0.0.1:8000/ 
+~~~
+# Preview EDP-only site
+mkdocs serve -f mkdocs_edp_only.yml
+# Open browser: http://127.0.0.1:8000/DARTH-docs/edp-docs/
+~~~
 
 - Changes you save in docs/ will automatically refresh in the browser. 
 
@@ -66,11 +73,36 @@ This updates the main branch with your latest Markdown edits.
 Publish the updated site to GitHub Pages: 
 
 ~~~
-python3 -m mkdocs gh-deploy
+# Build the main site
+mkdocs build -f mkdocs.yml -d site
+
+# Build the EDP-only site
+mkdocs build -f mkdocs_edp_only.yml -d site/edp-docs
 ~~~
+~~~
+ # Switch to gh-pages
+git checkout gh-pages
 
-This rebuilds the site/ folder and pushes it to the gh-pages branch. 
+# Copy main site to root
+cp -r ../DARTH-docs/site/* .
 
-The live site will automatically update at: 
+# Copy EDP site to subfolder
+mkdir -p edp-docs
+cp -r ../DARTH-docs/site/edp-docs/* edp-docs/
 
-https://darth-docs.github.io/DARTH-docs/edp/
+# Commit and push
+git add .
+git commit -m "Update main and EDP sites"
+git push origin gh-pages
+
+# Return to main
+git checkout main
+~~~
+## 6. Live URLS
+Main DARTH site:
+https://UNSW-CEEM.github.io/DARTH-docs/
+
+EDP-only site:
+https://UNSW-CEEM.github.io/DARTH-docs/edp-docs/
+
+Editing shared files (edp.md and accessssh.md) automatically updates both sites after rebuilding.
