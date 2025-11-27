@@ -1,17 +1,13 @@
-site_name: DARTH Documentation
+site_name: DARTH EDP Documentation
+site_url: https://unsw-ceem.github.io/DARTH-docs/edp-docs/
+use_directory_urls: true
+docs_dir: docs
+site_dir: site/edp-docs
 
 nav:
-  - Overview: overview.md
-  - Data Summary: tables_summary.md
   - Datasets:
-    - Ausgrid 300 Homes Solar Data: ausgrid300.md
-    - Solar Analytics Solar Data 2019 Dataset: solar_analytics_2019.md
-    - PV Bushfire Data: pv_bushfire.md
-    - Victorian Consumers Data: victorian_consumers.md
     - EDP (Energy Data Platform): edp.md
-    - BOM (Bureau of Meteorology): bom.md
   - Access: 
-    - Access via Web Downloader : accessweb.md
     - Access via SSH and Scripts : accessssh.md
 
 theme:

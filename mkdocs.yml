@@ -1,4 +1,8 @@
 site_name: DARTH Documentation
+site_url: https://unsw-ceem.github.io/DARTH-docs/
+use_directory_urls: true
+docs_dir: docs
+site_dir: site
 
 nav:
   - Overview: overview.md
