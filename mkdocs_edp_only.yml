@@ -7,8 +7,6 @@ site_dir: site/edp-docs
 nav:
   - Datasets:
     - EDP (Energy Data Platform): edp.md
-  - Access: 
-    - Access via SSH and Scripts : accessssh.md
 
 theme:
   name: material
