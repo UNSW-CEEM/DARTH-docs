@@ -1,108 +1,140 @@
-# DARTH Docs – Updating Instructions 
+# DARTH Docs – Editing & Deployment Instructions
 
-## 1.  Edit the docs 
+This repository contains the DARTH documentation built with MkDocs and deployed to GitHub Pages.
 
-### Get the project locally 
+There are two sites:
 
-Download or clone the DARTH-docs repository to your computer: 
+1. Main DARTH documentation site (full navigation)  
+   https://unsw-ceem.github.io/DARTH-docs/
 
-~~~
-cd DARTH-docs
-~~~
+2. Standalone EDP page (EDP-only content, separate build)  
+   https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/
 
- 
+------------------------------------------------------------
 
-### All documentation content is in the docs/ folder. 
+1. Get the project locally
 
-Each .md file corresponds to a page. 
+Clone the repository and enter it:
 
-Example: 
+    git clone https://github.com/UNSW-CEEM/DARTH-docs.git
+    cd DARTH-docs
 
-~~~
-docs/index.md   ← Home page
+------------------------------------------------------------
 
-	docs/overview.md
-  
-	docs/....... (the other pages of the DARTH DOCS)
-~~~
+2. Edit documentation content
 
-### Open the Markdown file you want to update in your code editor  
+All documentation content lives in the docs/ folder.
 
-Edit the file as needed.
-	
-	Note: Files like edp.md appear in both the main site and EDP site, so editing them updates both.
+Each Markdown file corresponds to a page on the site.
 
-## 2.  Preview changes locally 
+Example structure:
 
-Before publishing, you can see how your changes will look in the browser: 
+    docs/
+      index.md              ← Home page
+      tables_summary.md
+      ausgrid300.md
+      solar_analytics_2019.md
+      pv_bushfire.md
+      victorian_consumers.md
+      edp.md                ← EDP page (shared)
+      accessweb.md
+      accessssh.md
 
-~~~
-# Preview main DARTH site
-mkdocs serve -f mkdocs.yml
-# Open browser: http://127.0.0.1:8000/
-~~~
-~~~
-# Preview EDP-only site
-mkdocs serve -f mkdocs_edp_only.yml
-# Open browser: http://127.0.0.1:8000/DARTH-docs/edp-docs/
-~~~
+Important note about EDP:
 
-- Changes you save in docs/ will automatically refresh in the browser. 
+- docs/edp.md is used by:
+  - the main DARTH site
+  - the standalone EDP site
+- Editing this file updates both, once rebuilt and deployed.
 
-## 3. Commit changes 
+Open any .md file in your editor and make your changes.
 
-Once you’re happy with edits: 
+------------------------------------------------------------
 
-~~~
-git add . 
+3. Preview changes locally
 
-git commit -m "Update [page name or summary]"
-~~~
- 
+Preview the main DARTH site:
 
-## 4. Push to GitHub 
+    mkdocs serve -f mkdocs.yml
 
-~~~
-git push
-~~~
+Open in your browser:
 
-This updates the main branch with your latest Markdown edits. 
+    http://127.0.0.1:8000/
 
-## 5. Deploy the site 
+Preview the standalone EDP site:
 
-Publish the updated site to GitHub Pages: 
+    mkdocs serve -f mkdocs-edp.yml
 
-~~~
-# Build the main site
-mkdocs build -f mkdocs.yml -d site
+Open in your browser:
 
-# Build the EDP-only site
-mkdocs build -f mkdocs_edp_only.yml -d site/edp-docs
-~~~
-~~~
- # Switch to gh-pages
-git checkout gh-pages
+    http://127.0.0.1:8000/
 
-# Copy main site to root
-cp -r ../DARTH-docs/site/* .
+Both previews auto-refresh when files are saved.
 
-# Copy EDP site to subfolder
-mkdir -p edp-docs
-cp -r ../DARTH-docs/site/edp-docs/* edp-docs/
+------------------------------------------------------------
 
-# Commit and push
-git add .
-git commit -m "Update main and EDP sites"
-git push origin gh-pages
+4. Commit your Markdown changes
 
-# Return to main
-git checkout main
-~~~
-## 6. Live URLS
+Once you are happy with your edits:
+
+    git add docs
+    git commit -m "Update documentation: short description"
+    git push origin main
+
+This updates the source content, but does not publish the site yet.
+
+------------------------------------------------------------
+
+5. Deploy the sites
+
+A. Deploy the main DARTH site
+
+    mkdocs gh-deploy -f mkdocs.yml
+
+This builds and publishes the main site to GitHub Pages.
+
+------------------------------------------------------------
+
+B. Deploy the standalone EDP site
+
+The EDP site is built separately and copied into the main site output.
+
+    rm -rf site-edp-temp
+    mkdocs build -f mkdocs-edp.yml -d site-edp-temp
+
+    rm -rf site/edp-docs
+    mkdir -p site/edp-docs
+    cp -r site-edp-temp/* site/edp-docs/
+
+    mkdocs gh-deploy -f mkdocs.yml --dirty
+
+------------------------------------------------------------
+
+6. Commit standalone site configuration
+
+The standalone site configuration is tracked in Git.
+
+After deploying the EDP site:
+
+    git add mkdocs-edp.yml site/edp-docs
+    git commit -m "Update standalone EDP site"
+    git push origin main
+
+------------------------------------------------------------
+
+7. Live URLs
+
 Main DARTH site:
-https://UNSW-CEEM.github.io/DARTH-docs/
+https://unsw-ceem.github.io/DARTH-docs/
 
-EDP-only site:
-https://UNSW-CEEM.github.io/DARTH-docs/edp-docs/
+Standalone EDP page:
+https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/
 
-Editing shared files (edp.md and accessssh.md) automatically updates both sites after rebuilding.
+------------------------------------------------------------
+
+Important rules:
+
+- Do not manually edit the gh-pages branch
+- Do not commit random changes in site/
+- Only commit site/edp-docs/ when updating the standalone EDP site
+- Always deploy before committing generated standalone files
