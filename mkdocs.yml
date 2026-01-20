@@ -12,7 +12,7 @@ nav:
     - Solar Analytics Solar Data 2019 Dataset: solar_analytics_2019.md
     - PV Bushfire Data: pv_bushfire.md
     - Victorian Consumers Data: victorian_consumers.md
-    - EDP (Energy Data Platform): edp-docs/edp.md
+    - EDP (Energy Data Platform): edp.md
     - BOM (Bureau of Meteorology): bom.md
   - Access: 
     - Access via Web Downloader : accessweb.md
