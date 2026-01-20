@@ -1,0 +1,10 @@
+site_name: DARTH EDP 
+site_url: https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/
+
+docs_dir: docs/edp-standalone
+
+nav:
+  - EDP: edp.md
+
+theme:
+  name: material

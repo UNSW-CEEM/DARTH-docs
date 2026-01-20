@@ -1,0 +1,1507 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/edp/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>EDP (Energy Data Platform) - DARTH EDP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#edp-energy-data-platform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DARTH EDP" class="md-header__button md-logo" aria-label="DARTH EDP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DARTH EDP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EDP (Energy Data Platform)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DARTH EDP" class="md-nav__button md-logo" aria-label="DARTH EDP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DARTH EDP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    EDP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    EDP
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-research-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Research Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure &amp; Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-original-data-and-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix A: Original Data and Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix A: Original Data and Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-solar-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Solar Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Solar Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-survey-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Survey Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-systems-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Systems Metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-energy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Energy Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-deidentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Deidentification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wattwatchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Wattwatchers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-unifying-data-from-solar-analytics-and-wattwatchers-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Unifying Data from Solar Analytics and Wattwatchers Sites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Unifying Data from Solar Analytics and Wattwatchers Sites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-unifying-data-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Unifying Data Fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Unifying Data Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#energy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-and-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata and survey
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-unifying-energy-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Unifying Energy Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-unifying-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Unifying Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Unifying Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sola" class="md-nav__link">
+    <span class="md-ellipsis">
+      SolA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ww" class="md-nav__link">
+    <span class="md-ellipsis">
+      WW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sola_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SolA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ww_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WW
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-research-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Research Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure &amp; Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-original-data-and-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix A: Original Data and Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix A: Original Data and Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-solar-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Solar Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Solar Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-survey-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Survey Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-systems-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Systems Metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-energy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Energy Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-deidentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Deidentification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wattwatchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Wattwatchers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-unifying-data-from-solar-analytics-and-wattwatchers-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Unifying Data from Solar Analytics and Wattwatchers Sites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Unifying Data from Solar Analytics and Wattwatchers Sites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-unifying-data-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Unifying Data Fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Unifying Data Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#energy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-and-survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata and survey
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-unifying-energy-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Unifying Energy Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-unifying-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Unifying Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Unifying Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sola" class="md-nav__link">
+    <span class="md-ellipsis">
+      SolA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ww" class="md-nav__link">
+    <span class="md-ellipsis">
+      WW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sola_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SolA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ww_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WW
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="edp-energy-data-platform">EDP (Energy Data Platform)</h1>
+<h2 id="database">Database</h2>
+<p>The Energy Data Platform (EDP) is a comprehensive, research-grade dataset of high-resolution (5-minute) energy data from 951 Australian sites, spanning 2018–2025. It integrates:</p>
+<ul>
+<li>
+<p><strong>Energy measurements:</strong> solar PV generation, household consumption, battery charging/discharging, voltage, and current.</p>
+</li>
+<li>
+<p><strong>Site metadata:</strong> system specifications, inverter/subarray details, battery capacity, and connection type.</p>
+</li>
+<li>
+<p><strong>Survey responses:</strong> household characteristics, occupancy, appliances, heating/cooling, and energy-related behaviors.</p>
+</li>
+</ul>
+<h3 id="key-research-applications">Key Research Applications</h3>
+<ol>
+<li>
+<p><strong>Energy Behavior Analysis</strong></p>
+<ul>
+<li>
+<p>Study consumption patterns, appliance usage, and load profiles.</p>
+</li>
+<li>
+<p>Investigate temporal trends, daily routines, and peak demand behavior.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Distributed Energy Resources (DER) Research</strong></p>
+<ul>
+<li>
+<p>Evaluate solar PV generation and battery storage performance.</p>
+</li>
+<li>
+<p>Model and optimize energy systems at household or community scale.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Socio-Technical Insights</strong></p>
+<ul>
+<li>
+<p>Link energy behavior to household demographics, dwelling type, and occupancy.</p>
+</li>
+<li>
+<p>Explore the influence of lifestyle and building characteristics on energy use.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="structure-data">Structure &amp; Data</h3>
+<p>It consists of 5-minute energy data for 951 sites, spanning from 2018 to the end of October 2025. The database includes four types of tables, with one set being monthly partitions of all the data.</p>
+<table>
+<thead>
+<tr>
+<th>Database Table</th>
+<th>Columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>edp_data_{year}_{month}</td>
+<td>edp_site_id, unix_time, datetime, edp_device_and_circuit, circuit_label, edp_circuit_label, real_energy, real_energy_negative, real_energy_positive, current_avg, current_min, current_max, voltage_avg, voltage_min, voltage_max</td>
+</tr>
+</tbody>
+</table>
+<p>The data is provided by Solar Analytics and Wattwatchers and de-identified by UNSW. Solar Analytics site IDs start with “S”, while Wattwatchers site IDs start with “W”.</p>
+<p>Due to the large volume of time-series data, energy tables are partitioned by month (except for <em>edp_data_2018</em>). From 2019 onwards, data is stored in monthly partitions such as <em>edp_data_2019_01</em> for January 2019, with each partition ranging between 1–2 GB (2018 has ~4 GB). Partitions are accessible via the data downloader as regular tables.</p>
+<p>Each site has different temporal coverage. For the latest updates on first and last available dates, refer to the table<em>edp_data_first_and_last_dates</em></p>
+<table>
+<thead>
+<tr>
+<th>Database Table</th>
+<th>Columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>edp_data_first_and_last_dates</td>
+<td>edp_site_id, date_of_first_data, date_of_last_data</td>
+</tr>
+<tr>
+<td>edp_sites_metadata</td>
+<td>first_date_metadata_received, last_date_metadata_received, edp_site_id, state, site_time_zone, monitoring_hardware, inverter_manufacturer, inverter_model, subarray_manufacturer, subarray_model, inverter_ac_rating_kw, subarray_orientation, subarray_tilt, subarray_strings, subarray_modules_per_string, subarray_dc_rating_kw, islandable, has_battery, battery_size_make_model, limit_enabled, limit_amount, limit_applied</td>
+</tr>
+<tr>
+<td>edp_survey_answers</td>
+<td>edp_site_id, survey_date, consent_edp, consent_spt, consent_contact, consent_contact_method, over_18, postcode, state, account_holder, property_use, property_year, property_construction, property_construction_other, property_star_rating, num_floors, dwelling_type, dwelling_type_other, num_bedrooms, tenure, tenure_not_occupied, tenure_other, tenure_rented_from, tenure_rented_other, num_occupants, num_children, num_occupants_70plus, has_pets, num_type_pets, has_livestock, num_type_livestock, num_days_occupied, income_weekly, has_gas, has_gas_heating, has_gas_cooking, has_gas_hot_water, has_aircon, aircon_type, num_rooms_aircon, num_rooms_heated, num_refrigerators, has_pool_pump, dryer_usage, has_ev, ev_type, ev_charger_type, significant_loads_other, commercial_loads, business_hours, connection_type, has_controlled_load, islandable, property_power_outage_types, property_power_outage_other, area_power_outage_types, area_power_outage_other, power_outage_latest, hot_water_heat_type, hot_water_heat_type_other, rooms_heat_type, rooms_heat_type_other, has_battery, battery_size_make_model</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-a-original-data-and-preparation">Appendix A: Original Data and Preparation</h2>
+<p>EDP consists of 5-minute energy data from Solar Analytics and Wattwatchers. Both provide energy data through their APIs and send us the survey responses and some metadata as excel files. </p>
+<h3 id="1-solar-analytics">1. Solar Analytics</h3>
+<p>The first batch of Solar Analytics customers that participate in the EDP project includes 129 sites from all around the country. The first survey for this group was performed in December 2021. The second batch we received data for completed the survey in April 2022 (a few in June 2022) and included 485 sites. For each batch, Solar Analytics has provided us with two excel files, one the survey responses, and one the system details (sites metadata). A few sites from each batch opted out soon after the project commenced, leaving us with a total of 599 sites. </p>
+<h4 id="11-survey-responses">1.1. Survey Responses</h4>
+<p>The survey questions and the answers for all sites were provided in an excel file. Complete questions were the headers of the columns and answers for each site were provided as a row. We have mapped each survey question to a column name. Below is the list of column mapping used for the survey questions. The actual questions and the answer options for each can be found on the Column Mapping spreadsheet. </p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Field Name</th>
+<th></th>
+<th>#</th>
+<th>Field Name</th>
+<th></th>
+<th>#</th>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CONSENT_EDP</td>
+<td></td>
+<td>23</td>
+<td>DWELLING_TYPE</td>
+<td></td>
+<td>45</td>
+<td>AIRCON_TYPE</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CONSENT_SOLA</td>
+<td></td>
+<td>24</td>
+<td>DWELLING_TYPE_OTHER</td>
+<td></td>
+<td>46</td>
+<td>NUM_ROOMS_AIRCON</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CONSENT_SPT</td>
+<td></td>
+<td>25</td>
+<td>NUM_BEDROOMS</td>
+<td></td>
+<td>47</td>
+<td>NUM_ROOMS_HEATED</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CONSENT_CONTACT</td>
+<td></td>
+<td>26</td>
+<td>TENURE</td>
+<td></td>
+<td>48</td>
+<td>NUM_REFRIGERATORS</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CONSENT_CONTACT_METHOD</td>
+<td></td>
+<td>27</td>
+<td>TENURE_NOT_OCCUPIED</td>
+<td></td>
+<td>49</td>
+<td>HAS_POOLPUMP</td>
+</tr>
+<tr>
+<td>6</td>
+<td>NAME</td>
+<td></td>
+<td>28</td>
+<td>TENURE_OTHER</td>
+<td></td>
+<td>50</td>
+<td>DRYER_USAGE</td>
+</tr>
+<tr>
+<td>7</td>
+<td>EMAIL</td>
+<td></td>
+<td>29</td>
+<td>TENURE_RENTED_FROM</td>
+<td></td>
+<td>51</td>
+<td>HAS_EV</td>
+</tr>
+<tr>
+<td>8</td>
+<td>PHONE</td>
+<td></td>
+<td>30</td>
+<td>TENURE_RENTED_OTHER</td>
+<td></td>
+<td>52</td>
+<td>EV_TYPE</td>
+</tr>
+<tr>
+<td>9</td>
+<td>OVER_18</td>
+<td></td>
+<td>31</td>
+<td>NUM_OCCUMPANTS</td>
+<td></td>
+<td>53</td>
+<td>EV_CHARGER_TYPE</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SOLA_SITE_ID</td>
+<td></td>
+<td>32</td>
+<td>NUM_CHILDREN</td>
+<td></td>
+<td>54</td>
+<td>SIGNIFICANT_LOADS_OTHER</td>
+</tr>
+<tr>
+<td>11</td>
+<td>SOLA_SITE_NAME</td>
+<td></td>
+<td>33</td>
+<td>NUM_OCCUPANTS_70PLUS</td>
+<td></td>
+<td>55</td>
+<td>COMMERCIAL_LOADS</td>
+</tr>
+<tr>
+<td>12</td>
+<td>STREET</td>
+<td></td>
+<td>34</td>
+<td>HAS_PETS</td>
+<td></td>
+<td>56</td>
+<td>BUSINESS_HOURS</td>
+</tr>
+<tr>
+<td>13</td>
+<td>SUBURB</td>
+<td></td>
+<td>35</td>
+<td>NUM_TYPE_PETS</td>
+<td></td>
+<td>57</td>
+<td>CONNECTION_TYPE</td>
+</tr>
+<tr>
+<td>14</td>
+<td>POSTCODE</td>
+<td></td>
+<td>36</td>
+<td>HAS_LIVESTOCK</td>
+<td></td>
+<td>58</td>
+<td>HAS_CONTROLLED_LOAD</td>
+</tr>
+<tr>
+<td>15</td>
+<td>STATE</td>
+<td></td>
+<td>37</td>
+<td>NUM_TYPE_LIVESTOCK</td>
+<td></td>
+<td>59</td>
+<td>ISLANDABLE</td>
+</tr>
+<tr>
+<td>16</td>
+<td>ACCOUNT_HOLDER</td>
+<td></td>
+<td>38</td>
+<td>NUM_DAYS_OCCUPIED</td>
+<td></td>
+<td>60</td>
+<td>PROPERTY_POWER_OUTAGE_TYPES</td>
+</tr>
+<tr>
+<td>17</td>
+<td>PROPERTY_USE</td>
+<td></td>
+<td>39</td>
+<td>INCOME_WEEKLY</td>
+<td></td>
+<td>61</td>
+<td>PROPERTY_POWER_OUTAGE_OTHER</td>
+</tr>
+<tr>
+<td>18</td>
+<td>PROPERTY_YEAR</td>
+<td></td>
+<td>40</td>
+<td>HAS_GAS</td>
+<td></td>
+<td>62</td>
+<td>AREA_POWER_OUTAGE_TYPES</td>
+</tr>
+<tr>
+<td>19</td>
+<td>PROPERTY_CONSTRUCTION</td>
+<td></td>
+<td>41</td>
+<td>HAS_GAS_HEATING</td>
+<td></td>
+<td>63</td>
+<td>AREA_POWER_OUTAGE_OTHER</td>
+</tr>
+<tr>
+<td>20</td>
+<td>PROPERTY_CONSTRUCTION_OTHER</td>
+<td></td>
+<td>42</td>
+<td>HAS_GAS_COOKING</td>
+<td></td>
+<td>64</td>
+<td>POWER_OUTAGE_LATEST</td>
+</tr>
+<tr>
+<td>21</td>
+<td>PROPERTY_STAR_RATING</td>
+<td></td>
+<td>43</td>
+<td>HAS_GAS_HOT_WATER</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>NUM_FLOORS</td>
+<td></td>
+<td>44</td>
+<td>HAS_AIRCON</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Questions 31 to 38 were asked twice; the second set (all having if known) had no answers, hence was not included. </p>
+<h4 id="12-systems-metadata">1.2. Systems Metadata</h4>
+<p>Solar Analytics has provided us with a second excel sheet containing the sites’ metadata. The list of the column names is as follows: </p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Site ID</td>
+</tr>
+<tr>
+<td>2</td>
+<td>State</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Monitoring Hardware</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inverter Manufacturer</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inverter Model</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Inverter AC Rating (kW)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Subarray Manufacturer</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Subarray Model</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Subarray Orientation</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Subarray Tilt</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Subarray Strings</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Subarray Modules per String</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Subarray DC Rating (kW)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Has Battery</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Opted in</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Survey email</td>
+</tr>
+</tbody>
+</table>
+<p>Each site has had one or more rows in this file. The data was mostly clean, most answers to each question in a unified format, number values in numeric format, etc. </p>
+<h4 id="13-energy-data">1.3. Energy Data</h4>
+<p>Energy timeseries data with the granularity of 5 minutes has been retrieved from Solar Analytic API. Then for each circuit we extract device name, circuit label, and data which includes the following fields: </p>
+<ul>
+<li>
+<p>time </p>
+</li>
+<li>
+<p>site id </p>
+</li>
+<li>
+<p>energy </p>
+</li>
+<li>
+<p>negative energy </p>
+</li>
+<li>
+<p>positive energy </p>
+</li>
+<li>
+<p>reactive energy </p>
+</li>
+<li>
+<p>power </p>
+</li>
+<li>
+<p>power factor </p>
+</li>
+<li>
+<p>reactive power </p>
+</li>
+<li>
+<p>apparent power </p>
+</li>
+<li>
+<p>voltage </p>
+</li>
+<li>
+<p>current </p>
+</li>
+</ul>
+<p>The returned timestamp values are in Unix format in site’s local time. We convert the time to datetime format and keep both the original Unix time and the corresponding datetime. Also renamed the fields as below: </p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SolA Field Name</td>
+</tr>
+<tr>
+<td>2</td>
+<td>EDP Field Name</td>
+</tr>
+<tr>
+<td>3</td>
+<td>energy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>realEnergy</td>
+</tr>
+<tr>
+<td>5</td>
+<td>energyNeg</td>
+</tr>
+<tr>
+<td>6</td>
+<td>realEnergyNegative</td>
+</tr>
+<tr>
+<td>7</td>
+<td>energyPos</td>
+</tr>
+<tr>
+<td>8</td>
+<td>realEnergyPositive</td>
+</tr>
+<tr>
+<td>9</td>
+<td>power</td>
+</tr>
+<tr>
+<td>10</td>
+<td>realPower</td>
+</tr>
+</tbody>
+</table>
+<h4 id="14-deidentification">1.4. Deidentification</h4>
+<p>We de-identify all the sites and energy data. Site data includes site metadata and survey. We de-identify site data by removing name, full address, email, phone, and Solar Analytics customer ID. From the address fields we only keep postcode and state as they are required for some analyses but by themselves are not identifying. To de-identify the energy data we remove site ID and device names. For each site we generate and allocate a unique EDP site ID. This new id is then attached to all the data of the site, i.e., site metadata, survey, and energy timeseries data. Since we remove device name to deidentify the energy data, for each device we allocate a letter which we concatenate at the end of circuit label and add channel number after that. For example, if in the original data we have (typical for Solar Analytics energy data): </p>
+<table>
+<thead>
+<tr>
+<th>Site ID</th>
+<th>Device Name</th>
+<th>Circuit Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>98765</td>
+<td>D111122233_1</td>
+<td>ac_net_load</td>
+</tr>
+</tbody>
+</table>
+<p>After the process of deidentification we will have: </p>
+<table>
+<thead>
+<tr>
+<th>edp_site_id</th>
+<th>edp_device_and_circuit</th>
+<th>edp_circuit_label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1234</td>
+<td>A1</td>
+<td>ac_net_load_A1</td>
+</tr>
+</tbody>
+</table>
+<p>In this example, device name D111122233 is replaced with letter A and together with the channel number becomes A1, is named <em>edp_device_and_circuit</em>, and also added to the circuit label to differentiate it from the data of other devices/circuits (becoming <em>edp_circuit_label</em>). </p>
+<h3 id="2-wattwatchers">2. Wattwatchers</h3>
+<p>We have been receiving data and metadata from 352 Wattwatchers sites, each site having 6 devices. This section will be completed with data extraction and de-identification processes, however, the major differences between data from Solar Analytics and Wattwatchers are explained in the next section. </p>
+<h2 id="3-unifying-data-from-solar-analytics-and-wattwatchers-sites">3. Unifying Data from Solar Analytics and Wattwatchers Sites</h2>
+<p>The aim has been to have the data from Solar Analytics and Wattwatchers in the same database tables: one table for all the energy data, one table for metadata, and one table for survey responses. </p>
+<h3 id="31-unifying-data-fields">3.1. Unifying Data Fields</h3>
+<h4 id="energy-data">Energy data</h4>
+<p>There were no power columns in Wattwatchers data. Additionally, power fields (real power, apparent power, reactive power, power factor) are calculated from other fields and do not add any new information. Therefore, it was decided not to have those fields in the database, that is not to upload power fields of the Solar Analytics energy timeseries to the database. However, the deidentified csv files still include those fields. Additionally, Wattwatchers data had minimum and maximum voltage and current, while Solar Analytics data had average voltage and average current. It was decided to have three fields for each measure (min, max, average), fill the ones that have available values and keep the rest empty. </p>
+<h4 id="metadata-and-survey">Metadata and survey</h4>
+<p>To be completed. </p>
+<h3 id="32-unifying-energy-units">3.2. Unifying Energy Units</h3>
+<p>The energy data units were different for the two companies. Solar Analytics energy data unit was Wh while Wattwatchers energy data was in Joules. Therefore, we convert energy values of Wattwatchers from Joules to Wh. </p>
+<h3 id="33-unifying-time">3.3. Unifying Time</h3>
+<p>The Solar Analytics data is in local time but as UTC. We have converted it to local date and time and stored both values in the database (as <em>timestamp</em> and <em>datetime</em>). According to Solar Analytics because it is in local time, daylight saving is applied. The data for the one hour that the clocks are wound back is lost at Solar Analytics’ end and currently there is not a way to get that data. Because it happens overnight though, we would expect no production and (they expect) very little constant consumption. For analysis, the data could probably be interpolated to re-create that hour if needed (or just be ignored if appropriate). Wattwatchers data comes as Unix timestamps in local time. We store timezone of each site in the metadata and survey tables. </p>
+<h4 id="sola">SolA</h4>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Date &amp; Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1648950900</td>
+<td>3/04/2022 1:55</td>
+</tr>
+<tr>
+<td>1648951200</td>
+<td>3/04/2022 2:00</td>
+</tr>
+<tr>
+<td>1648951500</td>
+<td>3/04/2022 2:05</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>1648954200</td>
+<td>3/04/2022 2:50</td>
+</tr>
+<tr>
+<td>1648954500</td>
+<td>3/04/2022 2:55</td>
+</tr>
+<tr>
+<td>1648954800</td>
+<td>3/04/2022 3:00</td>
+</tr>
+<tr>
+<td>1648955100</td>
+<td>3/04/2022 3:05</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ww">WW</h4>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Date &amp; Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1648911300</td>
+<td>3/04/2022 1:55</td>
+</tr>
+<tr>
+<td>1648911600</td>
+<td>3/04/2022 2:00</td>
+</tr>
+<tr>
+<td>1648911900</td>
+<td>3/04/2022 2:05</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>1648914600</td>
+<td>3/04/2022 2:50</td>
+</tr>
+<tr>
+<td>1648914900</td>
+<td>3/04/2022 2:55</td>
+</tr>
+<tr>
+<td>1648915200</td>
+<td>3/04/2022 2:00</td>
+</tr>
+<tr>
+<td>1648915500</td>
+<td>3/04/2022 2:05</td>
+</tr>
+<tr>
+<td>1648915800</td>
+<td>3/04/2022 2:10</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>1648918500</td>
+<td>3/04/2022 2:55</td>
+</tr>
+<tr>
+<td>1648918800</td>
+<td>3/04/2022 3:00</td>
+</tr>
+<tr>
+<td>1648919100</td>
+<td>3/04/2022 3:05</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sola_1">SolA</h4>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Date &amp; Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1664675700</td>
+<td>2/10/2022 1:55</td>
+</tr>
+<tr>
+<td>1664676000</td>
+<td>2/10/2022 2:00</td>
+</tr>
+<tr>
+<td>1664676300</td>
+<td>2/10/2022 2:05</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>1664679000</td>
+<td>2/10/2022 2:50</td>
+</tr>
+<tr>
+<td>1664679300</td>
+<td>2/10/2022 2:55</td>
+</tr>
+<tr>
+<td>1664679600</td>
+<td>2/10/2022 3:00</td>
+</tr>
+<tr>
+<td>1664679900</td>
+<td>2/10/2022 3:05</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ww_1">WW</h4>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Date &amp; Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1664639700</td>
+<td>2/10/2022 1:55</td>
+</tr>
+<tr>
+<td>1664640000</td>
+<td>2/10/2022 3:00</td>
+</tr>
+<tr>
+<td>1664640300</td>
+<td>2/10/2022 3:05</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
