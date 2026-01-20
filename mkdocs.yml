@@ -5,7 +5,7 @@ docs_dir: docs
 site_dir: site
 
 nav:
-  - Overview: overview.md
+  - Overview: index.md
   - Data Summary: tables_summary.md
   - Datasets:
     - Ausgrid 300 Homes Solar Data: ausgrid300.md
