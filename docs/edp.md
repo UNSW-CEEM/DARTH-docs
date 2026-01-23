@@ -3,7 +3,7 @@ title: EDP (Energy Data Platform)
 layout: standalone
 ---
 
-# EDP (Energy Data Platform)
+# EDP (Energy Data Platform!)
 
 ## Database
 
