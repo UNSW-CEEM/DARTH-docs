@@ -9,6 +9,8 @@ layout: standalone
 
 The Energy Data Platform (EDP) is a comprehensive, research-grade dataset of high-resolution (5-minute) energy data from 951 Australian sites, spanning 2018–2025. It integrates:
 
+Check
+
 - **Energy measurements:** solar PV generation, household consumption, battery charging/discharging, voltage, and current.
 
 - **Site metadata:** system specifications, inverter/subarray details, battery capacity, and connection type.
