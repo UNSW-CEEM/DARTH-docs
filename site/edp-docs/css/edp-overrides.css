@@ -1,0 +1,21 @@
+/* Hide hamburger menu icon */
+.md-header__button.md-icon {
+  display: none;
+}
+
+/* Hide sidebar entirely */
+.md-sidebar {
+  display: none;
+}
+
+/* Remove left offset caused by sidebar */
+.md-main__inner {
+  margin-left: 0;
+}
+
+/* Disable click on the top-left logo for EDP only */
+.md-header-nav__title, 
+.md-header-nav__icon {
+  pointer-events: none;
+  cursor: default;
+}
