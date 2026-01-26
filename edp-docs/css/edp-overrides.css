@@ -13,3 +13,9 @@
   margin-left: 0;
 }
 
+/* Disable click on the top-left logo for EDP only */
+.md-header-nav__title, 
+.md-header-nav__icon {
+  pointer-events: none;
+  cursor: default;
+}
