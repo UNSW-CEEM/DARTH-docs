@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/accessssh/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/accessweb/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/ausgrid300/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/bom/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/edp/</loc>
-         <lastmod>2026-01-20</lastmod>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/overview/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/pv_bushfire/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/solar_analytics_2019/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/tables_summary/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://unsw-ceem.github.io/DARTH-docs/edp-docs/edp/victorian_consumers/</loc>
+         <lastmod>2026-01-26</lastmod>
     </url>
 </urlset>

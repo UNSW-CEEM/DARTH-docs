@@ -1,0 +1,15 @@
+/* Hide hamburger menu icon */
+.md-header__button.md-icon {
+  display: none;
+}
+
+/* Hide sidebar entirely */
+.md-sidebar {
+  display: none;
+}
+
+/* Remove left offset caused by sidebar */
+.md-main__inner {
+  margin-left: 0;
+}
+
