@@ -59,7 +59,7 @@ Preview the main DARTH site:
 
 Open in your browser:
 
-    http://127.0.0.1:8000/
+    http://127.0.0.1:8000/DARTH-docs/
 
 Preview the standalone EDP site:
 
@@ -67,7 +67,7 @@ Preview the standalone EDP site:
 
 Open in your browser:
 
-    http://127.0.0.1:8000/
+    http://127.0.0.1:8000/DARTH-docs/edp-docs/edp/edp/
 
 Both previews auto-refresh when files are saved.
 
