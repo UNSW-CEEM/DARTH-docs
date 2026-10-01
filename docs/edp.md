@@ -5,6 +5,23 @@ layout: standalone
 
 # EDP (Energy Data Platform!)
 
+By using this data you agree to:
+
+- Use the data for research purposes only.
+- Include this acknowledgement in any publication produced from the data: **"Australian Centre for Advanced Photovoltaics (ACAP), Energy Data Platform"**.
+- Not share access details.
+- Not share the data or access details with any generative AI tool (e.g. Gemini, Claude, ChatGPT, etc.).
+
+EDP data may be shared only within your organisation. Before sharing, you must get confirmation from the recipient that they will:
+
+- Use the data for research purposes only.
+- Not share it further, including with AI tools.
+- Include the acknowledgement in any publication produced from the data.
+
+**The EDP data cannot be included in publications, only aggregated data or analysis.**
+
+If in doubt, please contact **n.nourbakhsh@unsw.edu.au**
+
 ## Database
 
 The Energy Data Platform (EDP) is a comprehensive, research-grade dataset of high-resolution (5-minute) energy data from 951 Australian sites, spanning 2018–2025. It integrates:
@@ -17,7 +34,7 @@ Check
 
 - **Survey responses:** household characteristics, occupancy, appliances, heating/cooling, and energy-related behaviors.
 
-### Key Research Applications
+## Key Research Applications
 
 1. **Energy Behavior Analysis**
 
@@ -37,7 +54,7 @@ Check
 
     - Explore the influence of lifestyle and building characteristics on energy use.
 
-### Structure & Data 
+## Structure & Data 
 
 It consists of 5-minute energy data for 951 sites, spanning from 2018 to the end of October 2025. The database includes four types of tables, with one set being monthly partitions of all the data.
 
@@ -58,15 +75,15 @@ Each site has different temporal coverage. For the latest updates on first and l
 | edp_survey_answers | edp_site_id, survey_date, consent_edp, consent_spt, consent_contact, consent_contact_method, over_18, postcode, state, account_holder, property_use, property_year, property_construction, property_construction_other, property_star_rating, num_floors, dwelling_type, dwelling_type_other, num_bedrooms, tenure, tenure_not_occupied, tenure_other, tenure_rented_from, tenure_rented_other, num_occupants, num_children, num_occupants_70plus, has_pets, num_type_pets, has_livestock, num_type_livestock, num_days_occupied, income_weekly, has_gas, has_gas_heating, has_gas_cooking, has_gas_hot_water, has_aircon, aircon_type, num_rooms_aircon, num_rooms_heated, num_refrigerators, has_pool_pump, dryer_usage, has_ev, ev_type, ev_charger_type, significant_loads_other, commercial_loads, business_hours, connection_type, has_controlled_load, islandable, property_power_outage_types, property_power_outage_other, area_power_outage_types, area_power_outage_other, power_outage_latest, hot_water_heat_type, hot_water_heat_type_other, rooms_heat_type, rooms_heat_type_other, has_battery, battery_size_make_model |
 
 
-## Appendix A: Original Data and Preparation 
+# Appendix A: Original Data and Preparation 
 
 EDP consists of 5-minute energy data from Solar Analytics and Wattwatchers. Both provide energy data through their APIs and send us the survey responses and some metadata as excel files. 
 
-### 1. Solar Analytics 
+## 1. Solar Analytics 
 
 The first batch of Solar Analytics customers that participate in the EDP project includes 129 sites from all around the country. The first survey for this group was performed in December 2021. The second batch we received data for completed the survey in April 2022 (a few in June 2022) and included 485 sites. For each batch, Solar Analytics has provided us with two excel files, one the survey responses, and one the system details (sites metadata). A few sites from each batch opted out soon after the project commenced, leaving us with a total of 599 sites. 
 
-#### 1.1. Survey Responses 
+### 1.1. Survey Responses 
 
 The survey questions and the answers for all sites were provided in an excel file. Complete questions were the headers of the columns and answers for each site were provided as a row. We have mapped each survey question to a column name. Below is the list of column mapping used for the survey questions. The actual questions and the answer options for each can be found on the Column Mapping spreadsheet. 
 
@@ -97,7 +114,7 @@ The survey questions and the answers for all sites were provided in an excel fil
 
 Questions 31 to 38 were asked twice; the second set (all having if known) had no answers, hence was not included. 
 
-#### 1.2. Systems Metadata 
+### 1.2. Systems Metadata 
 
 Solar Analytics has provided us with a second excel sheet containing the sites’ metadata. The list of the column names is as follows: 
 
@@ -122,7 +139,7 @@ Solar Analytics has provided us with a second excel sheet containing the sites�
 
 Each site has had one or more rows in this file. The data was mostly clean, most answers to each question in a unified format, number values in numeric format, etc. 
 
-#### 1.3. Energy Data 
+### 1.3. Energy Data 
 
 Energy timeseries data with the granularity of 5 minutes has been retrieved from Solar Analytic API. Then for each circuit we extract device name, circuit label, and data which includes the following fields: 
 
@@ -165,7 +182,7 @@ The returned timestamp values are in Unix format in site’s local time. We conv
 | 9  | power |
 | 10 | realPower |
 
-#### 1.4. Deidentification 
+### 1.4. Deidentification 
 
 We de-identify all the sites and energy data. Site data includes site metadata and survey. We de-identify site data by removing name, full address, email, phone, and Solar Analytics customer ID. From the address fields we only keep postcode and state as they are required for some analyses but by themselves are not identifying. To de-identify the energy data we remove site ID and device names. For each site we generate and allocate a unique EDP site ID. This new id is then attached to all the data of the site, i.e., site metadata, survey, and energy timeseries data. Since we remove device name to deidentify the energy data, for each device we allocate a letter which we concatenate at the end of circuit label and add channel number after that. For example, if in the original data we have (typical for Solar Analytics energy data): 
 
@@ -182,7 +199,7 @@ After the process of deidentification we will have:
 
 In this example, device name D111122233 is replaced with letter A and together with the channel number becomes A1, is named *edp_device_and_circuit*, and also added to the circuit label to differentiate it from the data of other devices/circuits (becoming *edp_circuit_label*). 
 
-### 2. Wattwatchers 
+## 2. Wattwatchers 
 
 We have been receiving data and metadata from 352 Wattwatchers sites, each site having 6 devices. This section will be completed with data extraction and de-identification processes, however, the major differences between data from Solar Analytics and Wattwatchers are explained in the next section. 
 
